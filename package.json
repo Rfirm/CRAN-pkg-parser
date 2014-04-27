@@ -1,0 +1,24 @@
+{
+  "name": "CRAN-pkg-parser",
+  "version": "0.0.0",
+  "description": "CRAN package parser",
+  "main": "curl.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rfirm/CRAN-pkg-parser.git"
+  },
+  "keywords": [
+    "CRAN"
+  ],
+  "author": "chilijung <chilijung@gmail.com> (http://lijung.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.34.0",
+    "jsdom": "^0.10.5",
+    "node-stage": "^0.1.2",
+    "mkdirp": "^0.4.0"
+  }
+}
