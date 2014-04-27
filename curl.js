@@ -3,6 +3,7 @@ var stage = require('node-stage');
 var jsdom = require('jsdom');
 var mkdirp = require('mkdirp');
 var fs = require('fs');
+var url = require('url');
 
 // origin: http://mirror.fcaglp.unlp.edu.ar/CRAN/web/packages/available_packages_by_date.html
 
@@ -29,7 +30,11 @@ request.get({
 								pkg_obj.date = $inner;
 							}else if (i === 1) {
 								// package
-								pkg_obj.package = $inner;
+								var $href = $(this).find('a').attr('href');
+								var $val = $(this).find('a').html();
+								var url_resolve = url.resolve(origin, $href);
+								pkg_obj.package = $val;
+								pkg_obj.href = url_resolve;
 							}else if (i === 2) {
 								// title
 								pkg_obj.title = $inner;
