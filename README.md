@@ -9,10 +9,13 @@ npm install
 ```
 Start curl data from origin:
 
+#### Available CRAN Packages By Date of Publication
+
 ```
-node curl.js
+node curl_date.js
 ```
 after this the data will saved to file `data/pkg.json`
+
 
 ## License
 
